@@ -5,12 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" type="text/css" href="/static/css/unlock.css">
+    <style>
+      body {
+
+        font-family: 'MicrosoftYaHei', '微软雅黑;
+      }
+
+      #app {
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+
+      * {
+        -webkit-user-select: none;
+        user-select: none;
+      }
+
+    </style>
     <title>Title</title>
+    <script src="http://wx.indoorun.com/indoorun/indoorun/unlock/dist/static/jquery-1.7.1.min.js"></script>
 </head>
 <body ontouchstart="">
 <div id="app">
-  <unlock></unlock>
+  <unlock v-bind:data="val"></unlock>
 </div>
 </body>
 </html>

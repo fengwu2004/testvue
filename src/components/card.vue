@@ -2,7 +2,7 @@
   <div class="bg">
   <div class="card">
     <div class="title">
-      <img src="/static/assets/卡icon.png"/><label style="color: white;font-size: 1.5rem;font-weight: bold">智慧公交卡</label>
+      <img src="../assets/cardicon.png"/><label style="color: white;font-size: 1.5rem;font-weight: bold">智慧公交卡</label>
     </div>
     <div style="font-size: 0.8rem;color: #a4efff;padding-bottom: 5px">当前车站</div>
     <div style="color: white;padding-bottom: 10px">张江路祖冲之路</div>
@@ -13,8 +13,8 @@
       <label style="float: left">申川专线</label><label style="float:right;">火车站</label>
     </div>
     <label class="avatar">
-      <img src="/static/assets/头像边框.png" width="60" height="60"/>
-      <img src="/static/assets/头像.png" width="50" height="50"/>
+      <img src="../assets/avatarbg.png" width="60" height="60"/>
+      <img :src="user.wxHeadimgurl" width="50" height="50" style="border-radius: 50%"/>
     </label>
   </div>
   </div>
@@ -23,12 +23,14 @@
 <script>
   export default {
     name: 'card',
+    props:['user']
   }
+
 </script>
 
 <style scoped>
   .bg {
-    background-image: url("/static/assets/卡片背景.png");
+    background-image: url("../assets/cardbg.png");
     background-size: 100% 100%;
     position: relative;
     width: 100%;
@@ -36,7 +38,7 @@
 
   .card {
     position: relative;
-    background-image: url("/static/assets/卡.png");
+    background-image: url("../assets/card.png");
     background-size: 100% 100%;
     width: 80%;
     left: 0;

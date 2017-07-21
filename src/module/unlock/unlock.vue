@@ -1,7 +1,7 @@
 <template>
 <div>
-  <card></card>
-  <ticket></ticket>
+  <card v-bind:user="data.user"></card>
+  <ticket v-bind:doorStatus="data.doorStatus"></ticket>
   <bottom></bottom>
 </div>
 </template>
@@ -18,7 +18,8 @@
       card,
       ticket,
       bottom
-    }
+    },
+    props:['data']
   }
 
 </script>

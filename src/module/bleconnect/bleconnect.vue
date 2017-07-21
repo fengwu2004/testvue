@@ -1,18 +1,34 @@
 <template>
   <div class="bleconnect">
     <div class="center">
-      <img id="connecting" src="/static/assets/缓存.gif" width="80" height="80"/>
-      <img id="connectfailed" src="/static/assets/失败.png" width="80" height="75"/>
-      <div id="tip">设备连接中...</div>
+      <img v-show="status === 0" id="connecting" src="../../assets/circle.gif" width="80" height="80"/>
+      <img v-show="status === 1" id="connectfailed" src="../../assets/failed.png" width="80" height="75"/>
+      <div id="tip">{{ getTips }}</div>
     </div>
   </div>
 </template>
 
 <script>
 
-  export default  {
+  function getTips() {
 
+    if (this.status == 0) {
+
+      return '设备连接中...'
+    }
+
+    if (this.status == 1) {
+
+      return '连接失败，请重试!'
+    }
+  }
+
+  export default  {
     name: 'bleconnect',
+    props:['status'],
+    computed: {
+      getTips:getTips,
+    },
   }
 
 </script>
@@ -20,7 +36,7 @@
 <style scoped>
 
   .bleconnect {
-    background-image: url("/static/assets/背景.png");
+    background-image: url("../../assets/bg.png");
     background-size: 100% 100%;
     width: 100%;
     height: 100%;

@@ -29,7 +29,7 @@
 
   .submit {
 
-    background-image: url("/static/assets/按钮.png");
+    background-image: url("../assets/btn.png");
     background-size: 100% 100%;
     position: absolute;
     width: 100%;
@@ -44,7 +44,7 @@
 
   .submit:active {
 
-    background-image: url("/static/assets/按钮-按下.png");
+    background-image: url("../assets/btnactive.png");
     background-size: 100% 100%;
   }
 
