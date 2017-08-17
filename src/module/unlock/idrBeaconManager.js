@@ -141,12 +141,7 @@ function idrBeaconMgr() {
     
         alert(JSON.stringify(res))
       })
-  
-      wx.on('onWXDeviceStateChange', function(res) {
-    
-        alert(JSON.stringify(res))
-      })
-  
+      
       wx.error(function (res) {
     
         alert(JSON.stringify(res))
