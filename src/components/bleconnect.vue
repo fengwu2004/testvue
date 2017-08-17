@@ -1,8 +1,8 @@
 <template>
   <div class="bleconnect">
     <div class="center">
-      <img v-show="status === 0" id="connecting" src="../../assets/circle.gif" width="80" height="80"/>
-      <img v-show="status === 1" id="connectfailed" src="../../assets/failed.png" width="80" height="75"/>
+      <img v-show="status === 0" id="connecting" src="../assets/circle.gif" width="80" height="80"/>
+      <img v-show="status === 1" id="connectfailed" src="../assets/failed.png" width="80" height="75"/>
       <div id="tip">{{ getTips }}</div>
     </div>
   </div>
@@ -36,7 +36,7 @@
 <style scoped>
 
   .bleconnect {
-    background-image: url("../../assets/bg.png");
+    background-image: url("../assets/bg.png");
     background-size: 100% 100%;
     width: 100%;
     height: 100%;

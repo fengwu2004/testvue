@@ -26,12 +26,14 @@
       }
 
     </style>
-    <title>Title</title>
+    <title>扫码开闸</title>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
     <script src="http://wx.indoorun.com/indoorun/indoorun/unlock/dist/static/jquery-1.7.1.min.js"></script>
+    <script src="http://wx.indoorun.com/indoorun/indoorun/unlock/dist/static/JSLibrary.js"></script>
 </head>
 <body ontouchstart="">
 <div id="app">
-  <unlock v-bind:data="val"></unlock>
+  <unlock v-bind:data="val" v-bind:status="bleconnectStatus"></unlock>
 </div>
 </body>
 </html>
